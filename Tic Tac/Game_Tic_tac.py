@@ -1,5 +1,5 @@
      
-from game_func import display_board, enter_move, draw_move, make_list_of_free_fields
+from game_func import display_board, enter_move, draw_move, make_list_of_free_fields,victory_for
 
 board = [
     [1, 2, 3],
