@@ -34,6 +34,7 @@ def enter_move(board):
             move = int(input("Digite seu movimento no intervalode 1-9: "))
             if move < 1 or move > 9:
                 print("Movimento inválido! Escolha os movimentos entre 1 e 9 :)")
+                display_board(board)
                 continue
 
             row = (move - 1) // 3 
@@ -44,6 +45,7 @@ def enter_move(board):
                 break
             else:
                 print("Célula ocupada! Altera o seu movimento!")
+                display_board(board)
         except ValueError:
             print("Número de movimento inválido :(")
 
