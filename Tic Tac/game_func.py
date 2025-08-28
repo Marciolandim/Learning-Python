@@ -3,6 +3,9 @@ global board
 global XorO
 XorO = "XO"
 
+
+
+
 def display_board(board):
      # A função aceita um parâmetro contendo o status atual da placa
      # e o imprime no console.
@@ -18,6 +21,7 @@ def display_board(board):
         print()
         print("|       |       |       |")
         print("+-------+-------+-------+")
+
 
 
 
@@ -45,6 +49,7 @@ def enter_move(board):
 
 
 
+
 def make_list_of_free_fields(board):
  # A função navega pelo tabuleiro e constrói uma lista de todas as casas livres; 
  # a lista consiste em tuplas, enquanto cada tupla é um par de números de linha e coluna.
@@ -55,9 +60,12 @@ def make_list_of_free_fields(board):
             if str(board[l][c]) not in XorO:
                 free.append((l,c))
     return free
-    
+
+
+
 
 def draw_move(board):
+     # A função desenha o movimento do computador e atualiza o tabuleiro.
     free = make_list_of_free_fields(board)
     if free:
         r, c = free[randrange(len(free))]
@@ -65,7 +73,12 @@ def draw_move(board):
 
 
 
+
 def victory_for(board, sign):
+    # A função analisa o estado da placa a fim de verificar se 
+     # o jogador usando 'O's ou 'X's ganhou o jogo
+
+
     # Verifica linhas
     for row in board:
         win = True
