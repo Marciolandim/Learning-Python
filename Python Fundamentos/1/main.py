@@ -1,7 +1,7 @@
 
 import array as arr
 from pickle import EMPTY_LIST
-import socketserver as sockt
+
 
 print("Listas\n") 
 list = [1, 2, 3, 4, 5, 10, 12, 13 , 14 ,120] 
