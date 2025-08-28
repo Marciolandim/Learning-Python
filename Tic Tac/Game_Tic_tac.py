@@ -15,7 +15,7 @@ while True:
     enter_move(board)
     if victory_for(board, "O"):
         display_board(board)
-        print("Você ganhou!")
+        print("Tu ganhaste :)")
         break
     if not make_list_of_free_fields(board):
         display_board(board)
